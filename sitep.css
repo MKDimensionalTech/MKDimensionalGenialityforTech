@@ -28,18 +28,16 @@
     margin: 0;
 }
 header{
-    padding-top: 35px;
     background-image:linear-gradient(to bottom,#a3cdd7,#b0ebfa);
-
+    padding-top: 35px;
 }
 header> h1{
     text-align: center;
     color: #0A0928;
     padding-bottom: 20px;
     font-family: 'orbitron', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2.26em;
+    font-size: 2.5em;
 }
-
 nav#meumenu{
     background-color: #f0bc1f;
     width: 400px;
@@ -112,24 +110,6 @@ ul#coluna> li{
     transition: margin
     .6s;
 }
-@media (min-width:600px) {
-    nav#meumenu{
-        margin: auto;
-    }
-}
-header> nav#meumenu> a{
-    text-decoration: none;
-    color: #0A0928;
-    background-color: #f0bc1f;
-    border-radius: 20px 30px;
-    padding: 5px;
-    margin-left: 5px;
-    font-size: 0.83em;
-    font-family: 'good', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-header> nav#meumenu> a#I{
-    margin-left: 25px ;
-}
 a#I:hover{
     color:white;
     background-color: #0A0928;
@@ -146,39 +126,94 @@ a#C:hover{
     color:white;
     background-color: #0A0928;
 }
-section{
-    background-color: #0A0928;
-    padding: 0px;
+@media (min-width:600px) {
+    nav#meumenu{
+        margin: auto;
+    }
 }
-section> h2{
+section#Projeto{
+    text-align: center;
     color: #f0bc1f;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top:20px ;
+    padding-bottom:10px ;
     font-family: 'good', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    vertical-align: middle;
 }
-section> p{
-    color:rgb(0, 0, 0);
-    background-color: white;
+section#Projetos{
+    display: flex;
+    flex-wrap: wrap;
+}
+section#Projetos> div{
+    flex: 1 1 200px;
     max-width: 800px;
-    text-align: center;
-    margin: auto;
     padding: 20px;
-    font-family: 'chapanza','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 10px;
+    border-radius: 30px 30px;
+}
+section#Projetos> div#P1{
+    background-image:url(computador_codigos.jpg) ;
+    background-attachment: fixed;
+    box-shadow: 5px 5px #f0bc1f;
+}
+section#Projetos> div#P2{
+    background-image: url(circuito.jpg);
+    background-attachment: fixed;
+    box-shadow: 5px 5px #f0bc1f;
+}
+section#Projetos> div#P3{
+    background-image: url(codigos.jpg);
+    background-attachment: fixed;
+    box-shadow: 5px 5px #f0bc1f;
+}
+section#Projetos> div#P4{
+    background-image: url(teclado.jpg);
+    background-attachment: fixed;
+    box-shadow: 5px 5px #f0bc1f;
+}
+section#Projetos> div> a{
+    text-decoration: none;
+    color: black;
+}
+section#Projetos> div#P1> a{
+    color: white;
+}
+section#Projetos> div#P2> a{
+    color: #0A0928;
+}
+section#Projetos> div#P3> a{
+    color: white;
+}
+section#Projetos> div#P4> a{
+    color: white;
+}
+section#Projetos> div> a> h3{
+    font-family: 'good', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.12em;
+    padding: 8px;
+}
+section#Projetos> div> a> p{
+    font-family:'chapanza','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.92em;
+    background-color: #bfc6c755;
+    border-radius: 30px 30px;
+    padding: 10px;
+}
+section#Projetos> div> a> aside{
+    font-family: 'good', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.76em;
+    padding-top: 10px;
 }
 footer{
     background-color: #0A0928;
-    padding: 0px;
-    position: relative;
 }
-footer> section> h4{
+footer> h4{
     color: white;
     font-family:'good', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     padding-top:10px ;
     padding-bottom:10px;
 }
-footer> section> nav#rodape> div{
+footer> nav#rodape> div#rod{
    text-align: center;
+   padding-bottom: 15px;
+   
 }

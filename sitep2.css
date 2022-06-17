@@ -28,19 +28,96 @@
     margin: 0;
 }
 header{
-    height: 170px;
     background-image:linear-gradient(to bottom,#a3cdd7,#b0ebfa);
+    padding-top: 35px;
 
 }
 header> h1{
     text-align: center;
     color: #0A0928;
-    padding-top: 35px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     font-family: 'orbitron', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2.26em;
 }
-header> nav> a{
+
+nav#meumenu{
+    background-color: #f0bc1f;
+    width: 400px;
+    border-radius: 30px 30px;
+    margin-top: 20px;
+    padding: 8px;
+    margin-left: 5px;
+}
+header> nav#meumenu> ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header> nav#meumenu> ul> li> a{
+    text-decoration: none;
+    color: #0A0928;
+    border-radius: 20px 30px;
+    padding: 8px;
+    margin-left: 5px;
+    font-size: 0.83em;
+    font-family: 'good', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header> nav#meumenu> ul#menu> li{
+    list-style:none;
+    position: relative;
+}
+nav#meumenu ul > li.active> #submenu, nav#meumenu ul > li:hover> #submenu{
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    border-radius: 10px;
+    z-index: 2;
+}
+nav#meumenu #submenu{
+    display: none;
+}
+ul#coluna{
+    background-color: #0A0928;
+    border-radius: 10px 10px;
+}
+ul#coluna> li> a{
+    text-decoration: none;
+    color: white;
+    border-radius: 10px 10px;
+    font-family: 'good','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.83em;
+}
+ul#coluna> li{
+    list-style: none;
+    padding: 10px;
+    width: 100px;
+}
+nav#meumenu> ul#coluna> li{
+    display: inline-block;
+    list-style: none;
+}
+header> nav#meumenu> a#I{
+    margin-left: 25px ;
+}
+ul#coluna> li> a:hover{
+    border-radius: 10px 10px;
+    padding: 05px;
+    transition: margin
+    .4s;
+    background-color: #f0bc1f;
+    color:#0A0928;
+}
+ul#coluna> li{
+    transition: margin
+    .6s;
+}
+@media (min-width:600px) {
+    nav#meumenu{
+        margin: auto;
+    }
+}
+header> nav#meumenu> a{
     text-decoration: none;
     color: #0A0928;
     background-color: #f0bc1f;
