@@ -26,109 +26,165 @@
 }
 *{
     margin: 0;
+    padding: 0;
 }
 header{
+    width: 100%;
     background-image:linear-gradient(to bottom,#a3cdd7,#b0ebfa);
-    padding-top: 35px;
+}
+div#menumobile> img{
+    visibility: hidden;
+    position: absolute;
+}
+header> div#menumobile> h3{
+    display: none;
 }
 header> h1{
     text-align: center;
     color: #0A0928;
     padding-bottom: 20px;
     font-family: 'orbitron', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2.5em;
+    font-size: 3em;
 }
-nav#meumenu{
+img#botão{
+    display: none;
+}
+img#fechar{
+    display: none;
+    visibility: hidden;
+}
+nav#esconder{
+    position: relative;
+    visibility: hidden;
+    display: none;
+}
+nav#principal{
+    height: 30px;
+    margin: 0;
+    text-align: center;
+    padding-top: 5px;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    margin: auto;
     background-color: #f0bc1f;
-    width: 400px;
-    border-radius: 30px 30px;
-    margin-top: 20px;
-    padding: 8px;
-    margin-left: 5px;
+    padding: 0;
+    visibility: visible;
 }
-header> nav#meumenu> ul{
-    display: flex;
-    flex-wrap: wrap;
+nav#principal> ul{
+    margin: auto;
+    text-align: center;
 }
-
-header> nav#meumenu> ul> li> a{
+header> nav#principal> ul> li> a{
+    margin: auto;
     text-decoration: none;
     color: #0A0928;
     border-radius: 20px 30px;
-    padding: 8px;
-    margin-left: 5px;
     font-size: 0.83em;
     font-family: 'good', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-header> nav#meumenu> ul#menu> li{
+header> nav#principal> ul#menu> li{
+    margin: auto;
     list-style:none;
-    position: relative;
+    display: inline-flex;
+    padding: 5px;
+    text-align: center;
 }
-nav#meumenu ul > li.active> #submenu, nav#meumenu ul > li:hover> #submenu{
-    position: absolute;
-    display: block;
-    top: 100%;
-    left: 0;
-    border-radius: 10px;
-    z-index: 2;
-}
-nav#meumenu #submenu{
-    display: none;
-}
-ul#coluna{
-    background-color: #0A0928;
-    border-radius: 10px 10px;
-}
-ul#coluna> li> a{
+ul#submenu{
+    visibility:hidden;
+    position:absolute ;
+    padding-top:25px ;
+    list-style: none;
+    color: #0A0928;
     text-decoration: none;
-    color: white;
-    border-radius: 10px 10px;
-    font-family: 'good','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+ul#submenu> li{
+    padding: 8px;
+    background-color: #f0bc1f; 
+}
+ul#submenu> li> a{
+    color: #0A0928;
+    text-decoration: none;
     font-size: 0.83em;
+    font-family: 'good', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-ul#coluna> li{
-    list-style: none;
-    padding: 10px;
-    width: 100px;
-}
-nav#meumenu> ul#coluna> li{
-    display: inline-block;
-    list-style: none;
-}
-header> nav#meumenu> a#I{
-    margin-left: 25px ;
-}
-ul#coluna> li> a:hover{
-    border-radius: 10px 10px;
-    padding: 05px;
-    transition: margin
-    .4s;
-    background-color: #f0bc1f;
-    color:#0A0928;
-}
-ul#coluna> li{
-    transition: margin
-    .6s;
-}
-a#I:hover{
-    color:white;
-    background-color: #0A0928;
-}
-a#P:hover{
-    color:white;
-    background-color: #0A0928;
-}
-a#H:hover{
-    color:white;
-    background-color: #0A0928;
-}
-a#C:hover{
-    color:white;
-    background-color: #0A0928;
-}
-@media (min-width:600px) {
-    nav#meumenu{
-        margin: auto;
+@media (max-width:700px) {
+    header{
+        height: 30px;
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+    header> div#menumobile> img{
+        width: 30px;
+        height: 30px;
+        visibility: visible;
+    }
+    header> div#menumobile> h3{
+        color: #0A0928;
+        font-family:'orbitron', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        display: block;
+        font-size: 1.2em;
+        visibility: visible;
+        margin-left: 40px;
+    }
+    h1{
+        display: none;
+        visibility: hidden;
+    }
+    div#menumobile{
+        width: 100%;
+        height: 30px;
+        background-color: #f0bc1f;
+        display: flex;
+    }
+    nav#esconder{
+        display: inline !important;
+        visibility: hidden;
+        width: 100%;
+        height: 100%;
+    }
+    nav#esconder> ul{
+        background-color: #f0bc1f;
+    }
+    nav#esconder> ul> li{
+        list-style: none;
+        padding: 10px;
+    }
+    nav#esconder> ul> li> a{
+        text-decoration: none;
+        color: #0A0928;
+        text-align: center;
+        font-size: 0.83em;
+        font-family: 'good', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; ;
+    }
+    nav#principal{
+        display: none;
+        visibility: hidden;
+    }
+    div#menumobile> img#botão{
+        display: inline !important;
+        visibility: visible;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        left: 93%;
+        right: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        border: none;
+    }
+    img#fechar{
+        display: inline !important;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        left: 93%;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        visibility: hidden;
+        border: none;
     }
 }
 section#contatos{
