@@ -189,13 +189,18 @@ ul#submenu> li> a{
 }
 section#contatos{
     background-color: #0A0928;
-    padding: 0px;
+    padding: 30px;
 }
-section#contatos> h2{
+section#contatos> div> h2{
+    animation: h2 2s;
     color: #f0bc1f;
     text-align: center;
     padding: 20px;
     font-family: 'good', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@keyframes h2 {
+    from{transform: translateX(200px);}
+    to{transform: translateX(0);}
 }
 section#contatos> div{
     background-color: white;

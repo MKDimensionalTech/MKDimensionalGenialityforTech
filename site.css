@@ -40,11 +40,17 @@ header> div#menumobile> h3{
     display: none;
 }
 header> h1{
+    animation-name: h1;
+    animation-duration:6s;
     text-align: center;
     color: #0A0928;
     padding-bottom: 20px;
     font-family: 'orbitron', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 3em;
+}
+@keyframes h1 {
+    from{color: #f0bc1f;}
+    to {color:#0A0928;}
 }
 img#botão{
     display: none;
@@ -83,6 +89,9 @@ header> nav#principal> ul> li> a{
     border-radius: 20px 30px;
     font-size: 0.83em;
     font-family: 'good', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header> nav#principal> ul> li> a:after{
+    transition: 2s;
 }
 header> nav#principal> ul#menu> li{
     margin: auto;
@@ -192,11 +201,16 @@ section#Historia{
     background-color: #0A0928;
     padding: 0px;
 }
-section#Historia> h2{
+section#Historia> div> h2{
+    animation: h2 2s;
     color: #f0bc1f;
     text-align: center;
     padding-top: 20px;
     font-family: 'good', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@keyframes h2 {
+    from{transform: translateX(200px);}
+    to{transform: translateX(0);}
 }
 section#Historia> p{
     color: white;
@@ -213,12 +227,19 @@ section#Projeto{
     padding-bottom:10px ;
     font-family: 'good', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+section#Projeto> div> h2{
+    animation: h2 2s;
+}
+@keyframes h2 {
+    from{transform: translateX(200px);}
+    to{transform: translateX(0);}
+}
 section#Projetos{
     display: flex;
     flex-wrap: wrap;
-
 }
 section#Projetos> div{
+    animation: div 2s;
     flex: 1 1 200px;
     max-width: 800px;
     background-image:linear-gradient(to bottom,#C1EEF5, #35C5DB);
@@ -226,6 +247,10 @@ section#Projetos> div{
     padding: 20px;
     margin: 10px;
     border-radius: 30px 30px;
+}
+@keyframes div {
+    from{transform: translateX(200px);}
+    to{transform: translateX(0);}
 }
 section#Projetos> div> a{
     text-decoration: none;

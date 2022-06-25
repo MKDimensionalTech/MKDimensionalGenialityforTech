@@ -41,11 +41,17 @@ header> div#menumobile> h3{
     display: none;
 }
 header> h1{
+    animation-name: h1;
+    animation-duration:6s;
     text-align: center;
     color: #0A0928;
     padding-bottom: 20px;
     font-family: 'orbitron', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 3em;
+}
+@keyframes h1 {
+    from{color: #f0bc1f;}
+    to {color:#0A0928;}
 }
 img#botão{
     display: none;
@@ -192,13 +198,18 @@ section{
     background-color: #0A0928;
     padding: 0px;
 }
-section> h2{
+section> div> h2{
+    animation: h2 2s;
     color: #f0bc1f;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
     font-family: 'good', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     vertical-align: middle;
+}
+@keyframes h2 {
+    from{transform: translateX(200px);}
+    to{transform: translateX(0);}
 }
 section> p{
     color:rgb(0, 0, 0);
