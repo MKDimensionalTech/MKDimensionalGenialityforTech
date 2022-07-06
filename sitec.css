@@ -46,12 +46,37 @@ header> h1{
     font-family: 'orbitron', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 3em;
 }
-img#botão{
-    display: none;
-}
-img#fechar{
+div#div{
     display: none;
     visibility: hidden;
+}
+.barrinha-menu {
+    height: 4px;
+    width: 50px;
+    background-color: #000;
+    display: block;
+    margin: 4px;
+    transition: width 0.5s ease, margin-left 0.5s ease;
+}
+div#div2{
+  display: none;
+  visibility: hidden;
+}
+div#div2> div#menu1{
+  width: 35px;
+  height: 4px;
+  background-color: blueviolet;
+  margin-top: 0px;
+  transform: rotate(55deg);
+  position: absolute;
+  transition: width 0.5s ease, margin-left 0.5s ease;
+}
+div#div2> div#menu2{
+  width: 35px;
+  height: 4px;
+  background-color: blueviolet;
+  transform: rotate(-55deg);
+  transition: width 0.5s ease, margin-left 0.5s ease;
 }
 nav#esconder{
     position: relative;
@@ -139,52 +164,93 @@ ul#submenu> li> a{
         display: flex;
     }
     nav#esconder{
+        animation: nav 1s;
         display: inline !important;
         visibility: hidden;
         width: 100%;
-        height: 100%;
+    }
+    @keyframes nav {
+        from{transform: translateX(10px);}
+        to{transform: translateX(0);}
     }
     nav#esconder> ul{
-        background-color: #f0bc1f;
+        margin: auto;
+        background-color: #0A0928;
     }
     nav#esconder> ul> li{
         list-style: none;
-        padding: 10px;
+        margin:auto ;
+        padding: 30px;
+    }
+    nav#esconder> ul> li:hover{
+        background-color: #35C5DB;
+        animation: menu 2s;
     }
     nav#esconder> ul> li> a{
         text-decoration: none;
-        color: #0A0928;
+        text-align: center;
+        margin: auto;
+        color: white;
         text-align: center;
         font-size: 0.83em;
-        font-family: 'good', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; ;
+        font-family: 'good', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
+    @keyframes menu {
+        from{transform: translateX(100px);}
+        to{transform: translateX(0);}
+    }    
     nav#principal{
         display: none;
         visibility: hidden;
     }
-    div#menumobile> img#botão{
-        display: inline !important;
+    div#menumobile>img#logo{
+        display: block;
         visibility: visible;
-        position: absolute;
         width: 30px;
         height: 30px;
-        left: 93%;
+        position: absolute;
+    }
+    div#div{
+        display: block;
+        visibility: visible;
+        position: absolute;
+        left: 91%;
         right: 0px;
         margin-left: auto;
         margin-right: auto;
-        border: none;
+        
     }
-    img#fechar{
-        display: inline !important;
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        left: 93%;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-        visibility: hidden;
-        border: none;
+    .barrinha-menu {
+        height: 4px;
+        width: 50px;
+        background-color: #0A0928;
+        display: block;
+        margin: 4px;
+    }
+    div#div2{
+        visibility: visible;
+      display: none;
+      position: absolute;
+      left: 93%;
+      right: 0px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    div#div2> div#menu1{
+      width: 30px;
+      height: 4px;
+      background-color: #0A0928;
+      margin-top: 0px;
+      transform: rotate(55deg);
+      position: absolute;
+      transition: width 0.5s ease, margin-left 0.5s ease;
+    }
+    div#div2> div#menu2{
+      width: 30px;
+      height: 4px;
+      background-color: #0A0928;
+      transform: rotate(-55deg);
+      transition: width 0.5s ease, margin-left 0.5s ease;
     }
 }
 section#contatos{

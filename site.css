@@ -36,6 +36,38 @@ div#menumobile> img{
     visibility: hidden;
     position: absolute;
 }
+div#div{
+    display: none;
+    visibility: hidden;
+}
+.barrinha-menu {
+    height: 4px;
+    width: 50px;
+    background-color: #000;
+    display: block;
+    margin: 4px;
+    transition: width 0.5s ease, margin-left 0.5s ease;
+}
+div#div2{
+  display: none;
+  visibility: hidden;
+}
+div#div2> div#menu1{
+  width: 35px;
+  height: 4px;
+  background-color: blueviolet;
+  margin-top: 0px;
+  transform: rotate(55deg);
+  position: absolute;
+  transition: width 0.5s ease, margin-left 0.5s ease;
+}
+div#div2> div#menu2{
+  width: 35px;
+  height: 4px;
+  background-color: blueviolet;
+  transform: rotate(-55deg);
+  transition: width 0.5s ease, margin-left 0.5s ease;
+}
 header> div#menumobile> h3{
     display: none;
 }
@@ -51,13 +83,6 @@ header> h1{
 @keyframes h1 {
     from{color: #f0bc1f;}
     to {color:#0A0928;}
-}
-img#botão{
-    display: none;
-}
-img#fechar{
-    display: none;
-    visibility: hidden;
 }
 nav#esconder{
     position: relative;
@@ -125,7 +150,6 @@ ul#submenu> li:hover{
     padding: 15px;
 }
 ul#submenu> li>a:hover{
-
     color: white;
 }
 @media (max-width:700px) {
@@ -136,10 +160,47 @@ ul#submenu> li>a:hover{
         padding: 0;
         margin: 0;
     }
-    header> div#menumobile> img{
-        width: 30px;
-        height: 30px;
+    div#div{
+        display: block;
         visibility: visible;
+        position: absolute;
+        left: 91%;
+        right: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    .barrinha-menu {
+        height: 4px;
+        width: 50px;
+        background-color: #0A0928;
+        display: block;
+        margin: 4px;
+    }
+    div#div2{
+        visibility: visible;
+      display: none;
+      position: absolute;
+      left: 93%;
+      right: 0px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    div#div2> div#menu1{
+      width: 30px;
+      height: 4px;
+      background-color: #0A0928;
+      margin-top: 0px;
+      transform: rotate(55deg);
+      position: absolute;
+      transition: width 0.5s ease, margin-left 0.5s ease;
+    }
+    div#div2> div#menu2{
+      width: 30px;
+      height: 4px;
+      background-color: #0A0928;
+      transform: rotate(-55deg);
+      transition: width 0.5s ease, margin-left 0.5s ease;
     }
     header> div#menumobile> h3{
         color: #0A0928;
@@ -154,19 +215,19 @@ ul#submenu> li>a:hover{
         visibility: hidden;
     }
     div#menumobile{
-        width: 100%;
+        width: 100% !important;
         height: 30px;
         background-color: #f0bc1f;
         display: flex;
     }
     nav#esconder{
-        animation: nav 3s;
+        animation: nav 1s;
         display: inline !important;
         visibility: hidden ;
         width: 100%;
     }
     @keyframes nav {
-        from{transform: translateX(400px);}
+        from{transform: translateX(10px);}
         to{transform: translateX(0);}
     }
     nav#esconder> ul{
@@ -182,7 +243,6 @@ ul#submenu> li>a:hover{
         background-color: #35C5DB;
         animation: menu 2s;
     }
-
     nav#esconder> ul> li> a{
         text-decoration: none;
         text-align: center;
@@ -200,29 +260,12 @@ ul#submenu> li>a:hover{
         display: none;
         visibility: hidden;
     }
-    div#menumobile> img#botão{
-        display: inline !important;
+    div#menumobile>img#logo{
+        display: block;
         visibility: visible;
-        position: absolute;
         width: 30px;
         height: 30px;
-        left: 93%;
-        right: 0px;
-        margin-left: auto;
-        margin-right: auto;
-        border: none;
-    }
-    img#fechar{
-        display: inline !important;
         position: absolute;
-        width: 30px;
-        height: 30px;
-        left: 93%;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-        visibility: hidden;
-        border: none;
     }
 }
 main{

@@ -11,10 +11,17 @@
 <body>
     <header>
         <div id="menumobile">
-            <img src="favicon.ico" alt="logo">
+            <img id="logo" src="favicon.ico" alt="logo">
             <h3>MK dimensional Tech</h3>
-            <img id="fechar"src="botao-de-menu-de-tres-linhas-horizontais.png" alt="">
-            <img id="botão" src="botao-de-menu-de-tres-linhas-horizontais.png" alt="">
+            <div id="div">
+                <span id="menu1" class="barrinha-menu"></span>
+                <span id="menu2" class="barrinha-menu"></span>
+                <span id="menu3" class="barrinha-menu"></span>
+              </div>
+            <div id="div2">
+                <div id="menu1"></div>
+                <div id="menu2"></div>
+            </div>
         </div>
         <nav id="esconder">
             <ul>
@@ -145,31 +152,51 @@
         const projeto = document.getElementById('project')
         pmenu.addEventListener('mouseout', sair)
         projeto.addEventListener('mouseover', submenu)
-        const bclose= document.getElementById('fechar');
-        bclose.addEventListener('click', fechar)
-        const botão = document.getElementById('botão');
-        botão.addEventListener('click', clicar)
         const esconder = document.getElementById('esconder');
+        const div2=document.getElementById("div2");
+        const menu3 = document.getElementById("menu3");
+        const menu1 = document.getElementById("menu1");
+        const menu2 = document.getElementById("menu2");
+        const div=document.getElementById("div");
+        div.addEventListener("click",clicar1)
+        div2.addEventListener('click',clicar2)
         function clicar(){
             bclose.style.visibility='visible'
             botão.style.visibility='hidden'
             esconder.style.visibility='visible'
+            main.style.display='none'
         }
         function fechar(){
             bclose.style.visibility='hidden'
             botão.style.visibility='visible'
             esconder.style.visibility='hidden'
+            main.style.display='block'
         }
         function fecha(){
             bclose.style.visibility='hidden'
             botão.style.visibility='visible'
             esconder.style.visibility='hidden'
+            main.style.display='block'
         }
         function submenu(){
             pmenu.style.visibility='visible'
         }
         function sair(){
             pmenu.style.visibility='hidden'
+        }
+        function clicar1(){
+            div.style.display="none"
+            div2.style.display="block"
+            div2.style.marginTop="13px"
+            div2.style.marginLeft="10px"
+            esconder.style.visibility='visible'
+            main.style.display='none'
+        }
+        function clicar2(){
+            div.style.display="block"
+            div2.style.display="none"
+            esconder.style.visibility='hidden'
+            main.style.display='block'
         }
     </script>
 </body>
